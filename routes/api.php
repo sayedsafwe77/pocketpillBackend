@@ -80,6 +80,8 @@ Route::post('/cart', [UserCartController::class, 'addProduct'])
 Route::put('/cart/{productId}', [UserCartController::class, 'updateQuantity']);
 
 
+Route::post('/departmentName', [Staff::class, 'getDepartment']);
+
 // Customer Invoice Routes
 Route::get('/customer/orders', [UserInvoiceController::class, 'getAllInvoices'])
 ->name('allOrders');

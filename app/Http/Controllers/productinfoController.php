@@ -91,10 +91,10 @@ class productinfoController extends Controller
         ]);
         
         //insert new record in productimage table
-        // productimage::create([
-        //     'productCode'=>$request['productCode'],
-        //     'productImage'=>$request['productImage']
-        // ]);
+        productimage::create([
+            'productCode'=>$request['productCode'],
+            'productImage'=>$request['productImage']
+        ]);
         // return DB::table('productinfo')->latest('productCode')->first();
         return response()->json(['message'=>$request['categoryName']],200);
     }
